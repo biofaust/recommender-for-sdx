@@ -70,11 +70,11 @@ def most_similar_users(G, card, card_nodes, merch_nodes):
  
  
 def recommend_repositories(G, from_card, to_card):
-    # Get the set of repositories that from_user has contributed to
+    # Get the set of repositories that from_card has contributed to
     from_merch = set(G.neighbors(from_card))
-    # Get the set of repositories that to_user has contributed to
+    # Get the set of repositories that to_card has contributed to
     to_merch = set(G.neighbors(to_card))
  
-    # Identify repositories that the from_user is connected to that the to_user
+    # Identify repositories that the from_card is connected to that the to_card
     # is not connected to
     return from_merch.difference(to_merch)
